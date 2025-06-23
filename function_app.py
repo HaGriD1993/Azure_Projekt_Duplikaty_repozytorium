@@ -7,7 +7,7 @@ import os
 app = func.FunctionApp()
 
 @app.function_name(name="HttpTrigger")
-@app.route(route="delete-duplicates", auth_level=func.AuthLevel.FUNCTION, methods=["GET", "POST"])
+@app.route(route="delete-duplicates", auth_level=func.AuthLevel.ANONYMOUS, methods=["GET", "POST"])
 def main(req: func.HttpRequest) -> func.HttpResponse:
     try:
         azure_connection_string = os.getenv("AzureWebJobsStorage")
