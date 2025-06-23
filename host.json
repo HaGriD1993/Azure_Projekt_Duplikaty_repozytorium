@@ -4,24 +4,13 @@
     "id": "Microsoft.Azure.Functions.ExtensionBundle",
     "version": "[4.x, 5.0.0)"
   },
-  "extensions": {
-    "http": {
-      "routePrefix": "",
-      "maxOutstandingRequests": 200,
-      "maxConcurrentRequests": 100
-    }
-  },
+  "functionTimeout": "00:10:00",
   "logging": {
     "applicationInsights": {
       "samplingSettings": {
         "isEnabled": true,
         "excludedTypes": "Request"
       }
-    },
-    "logLevel": {
-      "default": "Warning",
-      "Function": "Information",
-      "Host": "Error"
     }
   }
 }
