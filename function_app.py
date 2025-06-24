@@ -6,7 +6,7 @@ import os
 
 app = func.FunctionApp()
 
-@app.function_name(name="HttpTrigger")
+@app.function_name(name="UsuwanieDuplikatow")
 @app.route(route="delete-duplicates", auth_level=func.AuthLevel.ANONYMOUS, methods=["GET", "POST"])
 def main(req: func.HttpRequest) -> func.HttpResponse:
     try:
